@@ -1,0 +1,16 @@
+<h2>My Posts</h2>
+<button>
+<%= link_to 'New', new_post_path() %>
+<%# aタグ生成。リンクテキスト,リンク先URL。%>
+</button>
+<ul>
+<% @posts.each do |post| %>
+<%# indexアクションで定義 %>
+    <li>
+    <%= link_to  post.title, post_path(post.id) %>
+    <%= link_to  "Edit", edit_post_path(post.id) %>
+    <%= link_to  "Delete", post_path(post.id), method: :delete, data: {confirm: 'Sure?'} %>
+    <%# deleteと要明示。確認ダイアログ。%>
+    </li>
+<% end %>
+</ul>
