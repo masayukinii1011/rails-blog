@@ -1,0 +1,22 @@
+<div class="main">
+  <div class="main-inner">
+  <h2>Edit Post</h2>
+  <%= form_for [:admin, @post] do |f| %>
+  <p class="form-title" >Title</p>
+  <p class="form-title-input">
+    <%= f.text_field :title, placeholder: 'enter title' %>
+    <% if @post.errors.messages[:title].any? %>
+    <span><%= @post.errors.messages[:title][0] %></span>
+    <% end %>
+  </p>
+  <p class="form-body">Text</p>
+  <p class="form-body-input">
+    <%= f.text_area :body, placeholder: 'enter text' %>
+    <% if @post.errors.messages[:body].any? %>
+    <span><%= @post.errors.messages[:body][0] %></span>
+    <% end %>
+  </p>
+  <p class="form-create"><%= f.submit class: "float-btn edit-btn" %></p>
+  <% end %>
+  </div>
+</div>

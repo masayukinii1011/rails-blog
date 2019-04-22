@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="main-inner">
+    <div class="dashboard-new-wrap">
+      <h2>Dashboard</h2>
+      <p><%= link_to "NEW POST", new_admin_post_path, class: "new-btn float-btn" %></p>
+    </div>
+    <div class="post-area">
+      <% @posts.each do |post| %>
+			<div class="post-component">
+				<%= link_to(admin_post_path(post), class: "post-link-area") do %>
+      	<p class="post-title"><%= truncate(post.title, length:15) %></p>
+      	<p class="post-body"><%=  truncate(post.body, length:100) %></p>
+        <p class="post-date"><%= post.created_at.to_s(:published_on) %></p>
+				<% end %>
+			  <div class="btn-area">
+        	<p><%= link_to "EDIT", edit_admin_post_path(post), class: "edit-btn float-btn" %></p>
+        	<p><%= link_to "DELETE", admin_post_path(post), class: "delete-btn float-btn", method: :delete, data: {confirm: 'Sure?'} %></p>
+        </div>
+			</div>
+  		<% end %>
+    </div>
+  </div>
+  <%= paginate @posts %>
+</div>
