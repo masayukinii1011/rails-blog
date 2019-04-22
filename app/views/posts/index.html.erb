@@ -1,16 +1,20 @@
-<h2>My Posts</h2>
-<button>
-<%= link_to 'New', new_post_path() %>
-<%# aタグ生成。リンクテキスト,リンク先URL。%>
-</button>
-<ul>
-<% @posts.each do |post| %>
-<%# indexアクションで定義 %>
-    <li>
-    <%= link_to  post.title, post_path(post.id) %>
-    <%= link_to  "Edit", edit_post_path(post.id) %>
-    <%= link_to  "Delete", post_path(post.id), method: :delete, data: {confirm: 'Sure?'} %>
-    <%# deleteと要明示。確認ダイアログ。%>
-    </li>
-<% end %>
-</ul>
+<div class="main">
+	<div class="main-inner">
+  <h2>Post List</h2>
+    <div class="post-area">
+		  <% @posts.each do |post| %>
+			<div class="post-component">
+				<%= link_to(post, class: "post-link-area") do %>
+      	<p class="post-title"><%= truncate(post.title, length:15) %></p>
+      	<p class="post-body"><%=  truncate(post.body, length:100) %></p>
+        <p class="post-date"><%= post.created_at.to_s(:published_on) %></p>
+				<% end %>
+				<div class="like">
+        	<like-button :post-id="<%= post.id %>"></like-button>
+				</div>
+			</div>
+  		<% end %>
+    </div>
+  </div>
+  <%= paginate @posts %>
+</div>

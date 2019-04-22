@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTestD</title>
+    <title>My Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Noto+Sans+JP" %>
+    <%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.8.1/css/all.css" %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
-
-  <body>
-    <p><%= link_to "HOME", root_path %></p>
-    <%= yield %>
+  <body id="top">
+    <div id="app">
+      <div class="wrap">
+        <header>
+          <nav>
+            <div class="nav-wrapper">
+              <h1><%= link_to("My Blog", root_path) %></h1>
+              <ul class="nav-menu">
+                <% if user_signed_in? %>
+                <li><%= link_to("Dashboard", admin_root_path, class: "nav-dashboard") %></li>
+                <li><%= link_to("About", about_path, class: "nav-about") %></li>
+                <li><%= link_to("Log Out", destroy_user_session_path, class: "nav-logout") %></li>
+                <% else %>
+                <li><%= link_to("About", about_path,class: "nav-about") %></li>
+                <li><%= link_to("Log In", new_user_session_path, class: "nav-login") %></li>
+                <% end %>
+              </ul>
+            </div>
+          </nav>
+          <div class="flash">
+          <% flash.each do |key, value| %>
+          <%= content_tag :div, value, class: "alert" %>
+          <% end %>
+          </div>
+        </header>
+        <%= yield %>
+      </div>
+      <footer>
+        <p>©Copyright 2019 Masayuki Nii All Rights Reserved.</p>
+        <top-button></top-button>
+      </footer>
+    </div>
   </body>
 </html>

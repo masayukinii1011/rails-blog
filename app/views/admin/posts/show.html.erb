@@ -1,0 +1,11 @@
+<div class="main">
+  <div class="main-inner">
+    <h2><%= @post.title %></h2>
+    <p class="post-date show"><%= @post.created_at.to_s(:published_on) %></p>
+    <%= simple_format @post.body, class: "post-body show" %>
+    <div class="btn-area show">
+      <p><%= link_to "Edit", edit_admin_post_path(@post), class: "edit-btn float-btn" %></p>
+      <p><%= link_to "Delete", admin_post_path(@post), class: "delete-btn float-btn", method: :delete, data: {confirm: 'Sure?'} %></p>
+    </div>
+  </div>
+</div>

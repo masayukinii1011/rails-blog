@@ -1,26 +1,10 @@
-<h2><%= @post.title %></h2>
-<p><%= simple_format @post.body %></p>
-<%# 改行を反映 %>
-<h3>Comments</h3>
-<% if @post.comments.any? %>
-<%# コメントがあれば %>
-<ul>
-<% @post.comments.each do |comment| %>
-    <li>
-        <%= comment.body %>
-        <%= link_to 'Delete', post_comment_path(@post, comment), method: :delete, data: { confirm: 'Sure?' } %>
-        <%# deleteと要明示。確認ダイアログ。%>
-    </li>
-<% end %>
-</ul>
-<% end %>
-<%= form_for([@post, @post.comments.build]) do |f| %>
-<%# comments#createに渡したい。post_idとコメントの新しいオブジェクトが必要。複数の場合は配列にする。 %>
-<%# Comment.new(post_id: @post.id)と同じ。 %>
-<p>
-  <%= f.text_field :body %>
-</p>
-<p>
-  <%= f.submit %>
-</p>
-<% end %>
+<div class="main">
+  <div class="main-inner">
+    <h2><%= @post.title %></h2>
+    <p class="post-date show"><%= @post.created_at.to_s(:published_on) %></p>
+    <%= simple_format @post.body, class: "post-body show" %>
+    <div class="like show">
+     <like-button :post-id="<%= @post.id %>"></like-button>
+    </div>
+  </div>
+</div>
