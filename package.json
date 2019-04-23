@@ -1,5 +1,5 @@
 {
-  "name": "rails-test-d",
+  "name": "rails-blog",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^4.0.2",
