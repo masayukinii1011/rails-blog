@@ -1,17 +1,23 @@
 {
-  "name": "rails-test-d",
+  "name": "rails-blog",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "^4.0.2",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
+    "core-js": "2",
     "rails-ujs": "^5.2.3",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.0",
     "vue-template-compiler": "^2.6.10"
   },
   "devDependencies": {
+    "css-loader": "^2.1.1",
+    "ts-pnp": "^1.1.2",
+    "typescript": "^3.4.5",
     "vue-smooth-scroll": "^1.0.13",
+    "webpack": "^4.30.0",
+    "webpack-dev-middleware": "^3.6.2",
     "webpack-dev-server": "^3.3.1"
   }
 }

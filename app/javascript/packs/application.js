@@ -17,12 +17,13 @@
 
 import 'babel-polyfill'
 import Vue from 'vue'
-import vueSmoothScroll from 'vue-smooth-scroll'
+//import vueSmoothScroll from 'vue-smooth-scroll'
 import LikeButton from '../components/LikeButton.vue'
-import TopButton from '../components/TopButton.vue'
+//import TopButton from '../components/TopButton.vue'
 
-Vue.use(vueSmoothScroll)
+//Vue.use(vueSmoothScroll)
 
+/*
 document.addEventListener('turbolinks:load', () => {
     new Vue({
         el: '#app',
@@ -42,4 +43,10 @@ document.addEventListener('turbolinks:load', () => {
         (getScrolled() > 200) ? topBtn.classList.add('fade-in') : topBtn.classList.remove('fade-in');
     }
 })
-
+*/
+document.addEventListener('turbolinks:load', () => {
+    new Vue({
+        el: '#app',
+        components: { LikeButton }
+    })
+})
