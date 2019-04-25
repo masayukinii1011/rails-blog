@@ -68,9 +68,9 @@ have_iconv?: checking for iconv... -------------------- yes
 "clang -o conftest -I/Users/masayukinii1011/.rbenv/versions/2.6.0/include/ruby-2.6.0/x86_64-darwin17 -I/Users/masayukinii1011/.rbenv/versions/2.6.0/include/ruby-2.6.0/ruby/backward -I/Users/masayukinii1011/.rbenv/versions/2.6.0/include/ruby-2.6.0 -I. -I/Users/masayukinii1011/.rbenv/versions/2.6.0/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT    -O3 -Wno-error=shorten-64-to-32  -pipe  -I /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libxml2 conftest.c  -L. -L/Users/masayukinii1011/.rbenv/versions/2.6.0/lib -L. -L/Users/masayukinii1011/.rbenv/versions/2.6.0/lib  -fstack-protector-strong -L/usr/local/lib     -lruby.2.6-static -framework Security -framework Foundation -lpthread -ldl -lobjc    "
 Undefined symbols for architecture x86_64:
   "_iconv", referenced from:
-      _main in conftest-86de6b.o
+      _main in conftest-a185b5.o
   "_iconv_open", referenced from:
-      _main in conftest-86de6b.o
+      _main in conftest-a185b5.o
 ld: symbol(s) not found for architecture x86_64
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 checked program was:
