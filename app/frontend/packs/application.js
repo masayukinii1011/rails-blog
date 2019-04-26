@@ -18,8 +18,9 @@
 import 'babel-polyfill'
 import Vue from 'vue'
 //import vueSmoothScroll from 'vue-smooth-scroll'
-import LikeButton from '../components/LikeButton.vue'
 //import TopButton from '../components/TopButton.vue'
+import LikeButton from '../components/LikeButton.vue'
+import '../stylesheets/application.scss'
 
 //Vue.use(vueSmoothScroll)
 
@@ -44,7 +45,7 @@ document.addEventListener('turbolinks:load', () => {
     }
 })
 */
-document.addEventListener(/*'turbolinks:load'*/'DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     new Vue({
         el: '#app',
         components: { LikeButton }
