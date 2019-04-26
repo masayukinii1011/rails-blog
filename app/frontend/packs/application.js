@@ -44,7 +44,7 @@ document.addEventListener('turbolinks:load', () => {
     }
 })
 */
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener(/*'turbolinks:load'*/'DOMContentLoaded', () => {
     new Vue({
         el: '#app',
         components: { LikeButton }
