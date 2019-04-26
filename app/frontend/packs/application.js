@@ -16,15 +16,12 @@
 // const imagePath = (name) => images(name, true)
 
 import 'babel-polyfill'
-import '../stylesheet/application.scss'
-import Rails from 'rails-ujs'
 import Vue from 'vue'
 //import vueSmoothScroll from 'vue-smooth-scroll'
 import LikeButton from '../components/LikeButton.vue'
 //import TopButton from '../components/TopButton.vue'
 
 //Vue.use(vueSmoothScroll)
-Rails.start()
 
 /*
 document.addEventListener('turbolinks:load', () => {
