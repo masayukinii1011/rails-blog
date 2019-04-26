@@ -20,7 +20,7 @@ import Vue from 'vue'
 //import vueSmoothScroll from 'vue-smooth-scroll'
 //import TopButton from '../components/TopButton.vue'
 import LikeButton from '../components/LikeButton.vue'
-//import '../stylesheets/application.scss'
+import '../stylesheets/application.scss'
 
 //Vue.use(vueSmoothScroll)
 

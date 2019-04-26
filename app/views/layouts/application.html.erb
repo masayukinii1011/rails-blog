@@ -6,8 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Noto+Sans+JP" %>
     <%= stylesheet_link_tag "https://use.fontawesome.com/releases/v5.8.1/css/all.css" %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application' %>
   </head>
   <body id="top">
     <div id="app">
@@ -38,9 +37,8 @@
       </div>
       <footer>
         <p>©Copyright 2019 Masayuki Nii All Rights Reserved.</p>
-        <%# <top-button></top-button> %>
+        <top-button></top-button>
       </footer>
     </div>
-  <%= javascript_pack_tag 'application' %>
   </body>
 </html>
