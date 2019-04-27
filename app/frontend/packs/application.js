@@ -17,20 +17,18 @@
 
 import 'babel-polyfill'
 import Vue from 'vue'
-//import vueSmoothScroll from 'vue-smooth-scroll'
-//import TopButton from '../components/TopButton.vue'
+import vueSmoothScroll from 'vue-smooth-scroll'
+import TopButton from '../components/TopButton.vue'
 import LikeButton from '../components/LikeButton.vue'
 import '../stylesheets/application.scss'
 
-//Vue.use(vueSmoothScroll)
+Vue.use(vueSmoothScroll)
 
-/*
-document.addEventListener('turbolinks:load', () => {
+document.addEventListener('DOMContentLoaded', () => {
     new Vue({
         el: '#app',
         components: { LikeButton, TopButton }
     })
-
     //スクロール量を取得する関数
     function getScrolled() {
         return (window.pageYOffset !== undefined) ? window.pageYOffset : document.documentElement.scrollTop
@@ -43,11 +41,4 @@ document.addEventListener('turbolinks:load', () => {
     window.onscroll = function () {
         (getScrolled() > 200) ? topBtn.classList.add('fade-in') : topBtn.classList.remove('fade-in');
     }
-})
-*/
-document.addEventListener('DOMContentLoaded', () => {
-    new Vue({
-        el: '#app',
-        components: { LikeButton }
-    })
 })
