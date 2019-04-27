@@ -5,8 +5,8 @@
 		  <% @posts.each do |post| %>
 			<div class="post-component">
 				<%= link_to(post, class: "post-link-area") do %>
-      	<p class="post-title"><%= truncate(post.title, length:15) %></p>
-      	<p class="post-body"><%=  truncate(post.body, length:100) %></p>
+      	<p class="post-title"><%= post.title %></p>
+      	<p class="post-body"><%=  post.body %></p>
         <p class="post-date"><%= post.created_at.to_s(:published_on) %></p>
 				<% end %>
 				<div class="like">
