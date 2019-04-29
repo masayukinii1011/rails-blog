@@ -16,12 +16,14 @@
 // const imagePath = (name) => images(name, true)
 
 import 'babel-polyfill'
+import Rails from 'rails-ujs'
 import Vue from 'vue'
 import vueSmoothScroll from 'vue-smooth-scroll'
 import TopButton from '../components/TopButton.vue'
 import LikeButton from '../components/LikeButton.vue'
 import '../stylesheets/application.scss'
 
+Rails.start()
 Vue.use(vueSmoothScroll)
 
 document.addEventListener('DOMContentLoaded', () => {

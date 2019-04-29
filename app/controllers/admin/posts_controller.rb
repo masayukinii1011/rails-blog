@@ -42,7 +42,7 @@ class Admin::PostsController < Admin::ApplicationController
     post = Post.find(params[:id])
     if post.destroy
       flash[:notice] = 'Deleted.'
-      redirect_back(fallback_location: admin_root_path)
+      redirect_to admin_root_path
     else
       flash.alert = 'Failed to delete.'
       redirect_back(fallback_location: admin_root_path)
