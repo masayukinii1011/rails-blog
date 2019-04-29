@@ -24,6 +24,9 @@ https://qiita.com/hiyamamoto/items/e0a30b4799314174b80f
 Rails アプリのアセットを Webpacker で管理する | もばらぶエンジニアブログ<br>
 https://engineering.mobalab.net/2018/05/05/manage-assets-in-rails-using-webpacker/
 
+Rails で JS を Webpacker 管理にしたら、 data-confirm が動かなくなった - Qiita<br>
+https://qiita.com/mokuo/items/a50a27a83c3328c116a7
+
 Rails + Vue.jsでいいね機能を実装する - Qiita<br>
 https://qiita.com/TakeshiFukushima/items/a6c698fec648c11eee9a
 
