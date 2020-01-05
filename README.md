@@ -33,7 +33,6 @@ Ruby on RailsにはSprocketsというモジュールによって、JavaScript,CS
 参考記事：
 https://qiita.com/hiyamamoto/items/e0a30b4799314174b80f
 
-### 問題
 Asset Pipelineを切り、JSの管理をWebpackerに一本化すると、data-confirmが効かなくなりました。
 data-confirmは記事削除ボタンの確認ダイアログに使用しています。
 rails-ujsモジュールをWebpackerで管理できるよう読み込ませることで解決しました。
